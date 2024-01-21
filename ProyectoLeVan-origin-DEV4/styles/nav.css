@@ -1,0 +1,109 @@
+@import url(styles.css);
+
+body{
+    background-color: rgb(113, 128, 111);
+    overflow-x: hidden;
+  
+}
+header{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+    padding-inline: 1rem;
+    color:#f0eeee;
+    margin-top: 1rem;
+    position: fixed
+}
+.logoLS{
+    height: 120px;
+    width: 120px;
+}
+header div{
+    margin-left: auto;
+}
+#navUl{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    background-color: #69c469;
+    width: 200px;
+    position: absolute;
+    left: -200px;
+    top: 3.5rem;
+    transition: left .3s ease-in-out;
+    z-index: 1000;
+}
+li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    padding-inline-end: 5rem;
+    cursor: pointer;
+    height: 50px;
+    width: 90%;
+    text-align: center;
+
+}
+li:hover{
+    background-color: rgba(0, 0, 0, 0.212);
+}
+#hamburguer{
+    padding: 2px;
+    background-color: #ffffff;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    padding: .5rem;
+}
+
+@media (min-width: 750px){
+    button{
+        display: none;
+    }
+    body{
+        background-color: rgb(52, 55, 115);
+    }
+
+    header{
+        padding: 0 4rem;
+        display: flex;
+        width: auto;
+
+    }
+   
+    #navUl {
+        display: flex;
+        flex-direction: row;
+        width: 400px;
+        margin: 0;
+        right: 150px;
+        top: 0;
+        left: 45vw;
+    }
+    li{
+        display: flex;
+        width: 80%;
+    
+    }
+    header div{
+        margin-left: 0;
+    }
+}
+@media (min-width: 1300px){
+    button{
+        display: none;
+    }
+    body{
+        background-color: rgb(31, 21, 3);
+    }
+
+    #navUl {
+        flex-direction: row;
+        width: 500px;
+        margin: 0;
+        left: 800px;
+        top: 0;
+        right: rem;
+    }
+}

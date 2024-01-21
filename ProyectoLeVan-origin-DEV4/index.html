@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeVan Sushi</title>
+    <link rel="stylesheet" href="./styles/body.css" />
+    <link rel="stylesheet" href="./styles/nav.css" />
+    <link rel="stylesheet" href="./styles/contact.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <button id="hamburguer">
+        <i class="bi bi-list" id="iconHamb"></i>
+      </button>
+      <div>
+        <img
+          src="../assets/images/logolevan.png"
+          alt="Logo Levansushi"
+          class="logoLS"
+        />
+        <!-- <h1>leVan</h1> -->
+      </div>
+      <nav>
+        <ul id="navUl">
+          <li onclick=" doSomethingAccordingToURL()">Inicio</li>
+          <li onclick=" doSomethingAccordingToURL()">Menu</li>
+          <li onclick=" doSomethingAccordingToURL()">Contacto</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div id="superposicion">
+        <h2 id="titulo">leVan Sushi</h2>
+        <p id="presentacion"></p>
+        <svg
+          viewBox="0 0 200 200"
+          xmlns="http://www.w3.org/2000/svg"
+          id="fondoSvg"
+        >
+          <path
+            fill="#F9F9F9"
+            d="M61.2,-47.5C74.5,-32.1,77.1,-7,72.1,17.1C67.2,41.2,54.6,64.3,36.1,72.2C17.5,80,-7,72.7,-28.2,61.4C-49.5,50.1,-67.5,34.8,-73.2,15.2C-78.8,-4.4,-72.2,-28.4,-58,-44C-43.8,-59.6,-21.9,-66.9,1,-67.8C24,-68.6,47.9,-62.9,61.2,-47.5Z"
+            transform="translate(100 100)"
+          />
+        </svg>
+      </div>
+      <div id="inicioCombos"></div>
+      <div id="contenedorCards"></div>
+      <div id="datosContacto"></div>
+    </main>
+    <section class="inicio"></section>
+    <section class="menu"></section>
+    <!-- <div id="clasicos">
+        <img src="./assets/images/californiaroll.jpg" alt="">
+        <h3>California</h3>
+        <span>kanikama,palta y queso crema</span>
+        <button>Comprar</button>
+    </div>
+    <div id="clasicos">
+        <img src="./assets/images/newyork.jpg" alt="">
+        <h3>New York</h3>
+        <span>salmon,palta y queso crema</span>
+        <button>Comprar</button>
+    </div>  
+    <div id="clasicos">
+        <img src="./assets/images/philadelphia.jpg" alt="">
+        <h3>Philadelphia</h3>
+        <span>langostino,palta y queso crema</span>
+        <button>Comprar</button>
+    </div>  
+    <div id="clasicos">
+        <img src="./assets/images/atun.jpg" alt="">
+        <h3>Atun 8p</h3>
+        <span>atun, queso y verdeo</span>
+        <button>Comprar</button>
+    </div>  
+    <div id="clasicos">
+        <img src="./assets/images/salmongrill.jpg" alt="">
+        <h3>Salmon Grill</h3>
+        <span>salmon grillado, queso y verdeo</span>
+        <button>Comprar</button>
+    </div> -->
+
+    <!-- CONTACT FORM V1 -->
+    <section class="container" id="contact">
+      <div class="row justify-center"></div>
+      <div class="col-10 col-form">
+        <div class="text-center my-4">
+          <h3>Dejanos tu mensaje</h3>
+        </div>
+        <div class="text-center my-4">
+          <div class="content">
+            <p>
+              Desde acá podemos ayudarte, si tenes cualquier duda o consulta
+              contactanos y te responderemos a la brevedad.
+            </p>
+          </div>
+        </div>
+        <div class="rounded-3 p-5">
+          <form
+            id="contactForm"
+            action="https://formsubit.co/your@email.com"
+            method="post"
+            class="needs-validation"
+            novalidate
+          >
+            <div id="alert-statut"></div>
+
+            <div class="col-12 mb-4">
+              <label for="name" class="mb-2 block font-semibold text-dark"
+                >Nombre<span class="lh-1 text-red-600">*</span></label
+              >
+              <input
+                type="text"
+                class="form-control form-input"
+                name="name"
+                placeholder="Nombre"
+                required
+              />
+              <div class="valid-feedback">Bien</div>
+              <div class="invalid-feedback">Por favor, ingrese un nombre.</div>
+            </div>
+
+            <div class="col-12 mb-4">
+              <label for="email" class="mb-2 block font-semibold text-dark"
+                >Email<span class="lh-1 text-red-600">*</span></label
+              >
+              <input
+                type="email"
+                class="form-control form-input"
+                name="email"
+                placeholder="Email"
+                aria-describedby="emailHelp"
+                required
+              />
+              <div id="emailHelp" class="form-text" placeholder="Email"></div>
+              <div class="valid-feedback">Bien</div>
+              <div class="invalid-feedback">
+                Por favor, ingrese un email válido.
+              </div>
+            </div>
+
+            <div class="col-12 mb-4">
+              <label for="phone" class="mb-2 block font-semibold text-dark"
+                >Teléfono (opcional)</label
+              >
+              <input
+                type="phone"
+                class="form-control form-input"
+                name="phone"
+                placeholder="Telefono"
+                aria-describedby="phoneHelp"
+              />
+            </div>
+
+            <div class="col-12 mb-4">
+              <label for="message" class="mb-2 block font-semibold text-dark"
+                >Mensaje<span class="lh-1 text-red-600">*</span></label
+              >
+              <textarea
+                class="form-control"
+                name="message"
+                rows="4"
+                required
+                placeholder="Mensaje ..."
+              ></textarea>
+              <div class="valid-feedback">Mensaje correcto.</div>
+              <div class="invalid-feedback">Por favor, ingrese un mensaje.</div>
+            </div>
+
+            <div class="col-12 mb-4" style="text-align: right !important">
+              <button id="btnEnviar" type="submit" class="btn btn-primary">
+                <div
+                  class="spinner-grow spinner-grow-sm me-2 d-none"
+                  id="loading-spinner"
+                  role="status"
+                >
+                  <span class="visually-hidden">Cargando...</span>
+                </div>
+                <span>Enviar</span>
+              </button>
+            </div>
+            <input name="recaptcha-token" type="hidden" />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!--boton whatsapp-->
+    <a
+      id="btnWhatsapp"
+      href="https://web.whatsapp.com/send?phone=5492236696780&amp;text=Hola, estoy en la página de leVan Sushi. Mi nombre es..."
+      role="button"
+      target="_blank"
+      class="w_button"
+    >
+    </a>
+
+    <footer class="text-white text-center text-lg-start bg-dark">
+      <!-- Grid container -->
+      <div id="footer1" class="container p-4">
+        <!--Grid row-->
+        <div class="row mt-4">
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">Sobre nosotros</h5>
+            <p>
+              Nuestra idea es que puedan disfrutar del sushi de alta gastronomía
+              en la comodidad de sus casas y/o trabajo.
+            </p>
+            <p>
+              Ponemos el alma para hacerles llegar, el mas exclusivo plato
+              oriental, con nuestra impronta de occidente en alta calidad y
+              precios cuidados!
+            </p>
+            <div class="mt-4">
+              <!-- Facebook -->
+              <a
+                href="https://web.facebook.com/levansushi/"
+                type="button"
+                class="btn btn-floating btn-light btn-lg btn-circle"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <!-- Instagram -->
+              <a
+                href="https://www.instagram.com/levan_sushi/"
+                type="button"
+                class="btn btn-floating btn-light btn-lg btn-circle"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <!-- Whatsapp -->
+              <a
+                href="https://web.whatsapp.com/send?phone=5492236696780&amp;text=Hola, estoy en la página de leVan Sushi. Mi nombre es..."
+                type="button"
+                class="btn btn-floating btn-light btn-lg btn-circle"
+                ><i class="bi bi-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4 pb-1">Contacto</h5>
+            <ul class="fa-ul">
+              <div class="mb-3">
+                <span class="fa-li"><i class="bi bi-geo-alt"></i></span
+                ><span class="ms-2"> Mar del Plata, 7600, Buenos Aires</span>
+              </div>
+              <div class="mb-3">
+                <span class="fa-li"><i class="bi bi-envelope"></i></span
+                ><span class="ms-2"> contact@example.com</span>
+              </div>
+              <div class="mb-3">
+                <span class="fa-li"><i class="bi bi-phone"></i></span
+                ><span class="ms-2"> Delivery: + 54 9 223 669-6780</span>
+              </div>
+              <div class="mb-3">
+                <span class="fa-li"><i class="bi bi-telephone"></i></span
+                ><span class="ms-2">
+                  Tel Comercial/Eventos: + 54 9 223 656-6505
+                </span>
+              </div>
+            </ul>
+          </div>
+
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">Abrimos</h5>
+
+            <table class="table text-center text-white">
+              <tbody class="fw-normal">
+                <tr>
+                  <td>Jueves - Sábados:</td>
+                  <td>18hs - 22hs</td>
+                </tr>
+                <tr>
+                  <td>Domingos - Miércoles:</td>
+                  <td>Cerrado</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Grid container -->
+      <!-- Copyright -->
+      <div
+        id="footer2"
+        class="text-center p-3"
+        style="background-color: rgba(0, 0, 0, 0.2)"
+      >
+        © 2024 Copyright:
+        <a class="text-white" href="https://web.facebook.com/levansushi/"
+          >leVan Sushi</a
+        >
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+    <script src="custom.js"></script>
+  </body>
+</html>

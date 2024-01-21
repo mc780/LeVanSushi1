@@ -1,0 +1,33 @@
+.btn-circle {
+    border-radius: 50% !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+footer {
+    position: relative;
+    background-image: url('/assets/images/sushi.contacto.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#footer2 {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 40%;
+}

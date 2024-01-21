@@ -1,0 +1,182 @@
+.glass {
+    background: rgba(253, 252, 252, 0.25) !important;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37) !important;
+    backdrop-filter: blur(6.5px) !important;
+    -webkit-backdrop-filter: blur(6.5px) !important;
+    border-radius: 10px !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.muestra {
+    background-color: transparent !important;
+    border: none !important;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.2) !important;
+    transition: .3s !important;
+}
+
+.muestra:hover {
+    border: 5px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+#h1-contacto {
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 60px !important;
+}
+
+.text-focus-in {
+    -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+#btnEnviar {
+    position: relative;
+    right: 0 !important;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 0.375rem;
+    background-color: #69c469 !important;
+    color: #fff8f8;
+    padding: 0.875rem 1.75rem 0.75rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition-property: all;
+    transition-duration: .3s;
+    border: 0 solid #e5e7eb;
+    text-align: right !important;
+}
+
+.text-red-600 {
+    --tw-text-opacity: 1;
+    color: rgb(220 38 38/var(--tw-text-opacity))
+}
+
+.form-input textarea {
+    display: inline-block;
+    height: 52px;
+    width: 100%;
+    border-width: 1px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    outline-width: 0;
+    transition-property: border;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-duration: .3s;
+    border-radius: .35rem;
+}
+
+.form-control:focus {
+    border-color: #448744;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(105, 196, 105, 0.25);
+}
+
+.shadow {
+    box-shadow: 0 8px 25px 10px rgba(0, 0, 0, .05)
+}
+
+#contact {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+    border: 0 solid #e5e7eb;
+    background-repeat: no-repeat;
+    border: 0 solid #e5e7eb;
+    display: none;
+}
+
+.col-form {
+    background-color: #fff;
+}
+
+
+
+/* ---------------------------------------- * animation text-focus-in * ---------------------------------------- */
+
+@-webkit-keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+.col-form {
+    max-width: 100% !important;
+}
+
+
+
+/* Boton Whatsapp */
+.w_button {
+    position: fixed !important;
+    width: 60px !important;
+    height: 60px !important;
+    bottom: 20px !important;
+    right: 20px;
+    background-color: #25D366 !important;
+    color: #ffffff !important;
+    border-radius: 50px !important;
+    text-align: center !important;
+    box-shadow: 0 8px 25px -5px rgba(45, 62, 79, .3) !important;
+    z-index: 9999999 !important;
+    text-decoration: none;
+}
+
+.w_button::before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30px" height="30px"><path fill="%23fff" d="M3.516 3.516c4.686-4.686 12.284-4.686 16.97 0 4.686 4.686 4.686 12.283 0 16.97a12.004 12.004 0 01-13.754 2.299l-5.814.735a.392.392 0 01-.438-.44l.748-5.788A12.002 12.002 0 013.517 3.517zm3.61 17.043l.3.158a9.846 9.846 0 0011.534-1.758c3.843-3.843 3.843-10.074 0-13.918-3.843-3.843-10.075-3.843-13.918 0a9.846 9.846 0 00-1.747 11.554l.16.303-.51 3.942a.196.196 0 00.219.22l3.961-.501zm6.534-7.003l-.933 1.164a9.843 9.843 0 01-3.497-3.495l1.166-.933a.792.792 0 00.23-.94L9.561 6.96a.793.793 0 00-.924-.445 1291.6 1291.6 0 00-2.023.524.797.797 0 00-.588.88 11.754 11.754 0 0010.005 10.005.797.797 0 00.88-.587l.525-2.023a.793.793 0 00-.445-.923L14.6 13.327a.792.792 0 00-.94.23z"/></svg>') !important;
+    position: relative !important;
+    color: #ffffff !important;
+    font-size: 30px !important;
+    display: block !important;
+    text-align: center !important;
+    width: 60px;
+    top: 0px !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    line-height: 1 !important;
+    text-align: center !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    margin-top: 15px !important;
+}
+
+.w_button {
+    position: fixed !important;
+    width: 60px !important;
+    height: 60px !important;
+    bottom: 20px !important;
+    background-color: #25D366 !important;
+    color: #ffffff !important;
+    border-radius: 50px !important;
+    text-align: center !important;
+    box-shadow: 0 8px 25px -5px rgba(45, 62, 79, .3) !important;
+    z-index: 9999999 !important;
+    text-decoration: none;
+}
